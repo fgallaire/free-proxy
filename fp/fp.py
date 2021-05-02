@@ -17,7 +17,7 @@ class FreeProxy:
 
     def get_proxy_list(self):
         try:
-            page = requests.get('https://www.sslproxies.org')
+            page = requests.get('https://free-proxy-list.net')
             doc = lh.fromstring(page.content)
             tr_elements = doc.xpath('//*[@id="proxylisttable"]//tr')
             if not self.country_id:
